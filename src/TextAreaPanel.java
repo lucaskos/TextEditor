@@ -1,18 +1,26 @@
-import java.awt.event.KeyEvent;
+import java.awt.FlowLayout;
 
-import javax.swing.JLabel;
+import javax.swing.JButton;
 import javax.swing.JPanel;
-
-import javafx.scene.control.Separator;
+import javax.swing.JTextField;
 
 public class TextAreaPanel extends JPanel {
-	private Separator separator;
-	private JLabel rows;
+	private JTextField searchText;
+	private JButton searchBtn;
 	
 	public TextAreaPanel() {
+		setSize(100, 100);
 		
-		rows = new JLabel();
+		searchText = new JTextField(20);
+		searchText.setEditable(true);
+		searchBtn = new JButton("Search");
+		
+		setLayout(new FlowLayout());
 		setVisible(true);
+		
+		
+		add(searchBtn, FlowLayout.LEFT);
+		add(searchText, FlowLayout.LEFT);
 		
 	}
 	   
